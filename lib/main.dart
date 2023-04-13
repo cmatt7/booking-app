@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:booking_app/components/bottom_bar.dart';
 
 void main() => runApp(const MainApp());
 
@@ -11,7 +12,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Center(
-          child: Text('Hello World!'),
+          child: BottomBar(),
         ),
       ),
     );
