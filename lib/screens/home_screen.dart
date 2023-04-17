@@ -1,8 +1,16 @@
-import 'package:booking_app/screens/ticket_view.dart';
-import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:booking_app/utils/app_style.dart';
+
+// Dependecies
+import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:gap/gap.dart';
+
+// Utils
+import 'package:booking_app/utils/app_style.dart';
+
+// Components
+import 'package:booking_app/components/hotel_card.dart';
+import 'package:booking_app/components/ticket_view.dart';
+import 'package:booking_app/utils/app_list_data.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -94,12 +102,39 @@ class HomeScreen extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               padding: const EdgeInsets.only(left: 20),
               child: Row(
-                children: const [
-                  TicketView(),
-                  TicketView()
+                children: ticketList.map((singleTicket) => TicketView(ticket: singleTicket)).toList(),
+              ),
+            ),
+            const Gap(15),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Hotels",
+                    style: Styles.headLineStyle2,
+                  ),
+                  InkWell(
+                    onTap: () => print("You are tapped"),
+                    child: Text(
+                      "View all",
+                      style:
+                          Styles.textStyle.copyWith(color: Styles.primaryColor),
+                    ),
+                  ),
                 ],
               ),
             ),
+            const Gap(15),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.only(left: 20),
+              child: Row(
+                children: hotelList.map((singleHotel) => HotelCard(hotel: singleHotel)).toList(),
+              ),
+            ),
+            const Gap(30),
           ],
         ));
   }
