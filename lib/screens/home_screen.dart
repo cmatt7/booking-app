@@ -1,3 +1,4 @@
+import 'package:booking_app/widgets/title_widget.dart';
 import 'package:flutter/material.dart';
 
 // Dependecies
@@ -78,23 +79,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 const Gap(40),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Upcoming Flights",
-                      style: Styles.headLineStyle2,
-                    ),
-                    InkWell(
-                      onTap: () => print("You are tapped"),
-                      child: Text(
-                        "View all",
-                        style: Styles.textStyle
-                            .copyWith(color: Styles.primaryColor),
-                      ),
-                    ),
-                  ],
-                ),
+                const TitleWidget(title: "Upcoming Flights")
               ],
             ),
           ),
@@ -111,23 +96,7 @@ class HomeScreen extends StatelessWidget {
           const Gap(15),
           Container(
             padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(20)),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Hotels",
-                  style: Styles.headLineStyle2,
-                ),
-                InkWell(
-                  onTap: () => print("You are tapped"),
-                  child: Text(
-                    "View all",
-                    style:
-                        Styles.textStyle.copyWith(color: Styles.primaryColor),
-                  ),
-                ),
-              ],
-            ),
+            child: const TitleWidget(title: "Hotels"),
           ),
           const Gap(15),
           SingleChildScrollView(
