@@ -9,8 +9,8 @@ import 'package:booking_app/utils/app_style.dart';
 import 'package:booking_app/utils/app_layout.dart';
 
 // Components
-import 'package:booking_app/components/hotel_card.dart';
-import 'package:booking_app/components/ticket_view.dart';
+import 'package:booking_app/widgets/hotel_card.dart';
+import 'package:booking_app/widgets/ticket_view.dart';
 import 'package:booking_app/utils/app_list_data.dart';
 
 class HomeScreen extends StatelessWidget {

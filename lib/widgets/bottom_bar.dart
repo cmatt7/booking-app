@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
+
+// Dependecies
+//import 'package:flutter/cupertino.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 
 // Screens
 import 'package:booking_app/screens/home_screen.dart';
+import 'package:booking_app/screens/search_screen.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({Key? key}) : super(key: key);
@@ -17,7 +20,7 @@ class _BottomBar extends State<BottomBar> {
 
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeScreen(),
-    const Text("Search"),
+    const SearchScreen(),
     const Text("Tickets"),
     const Text("Profile"),
   ];

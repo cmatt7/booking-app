@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:booking_app/components/bottom_bar.dart';
+import 'package:booking_app/widgets/bottom_bar.dart';
 
 void main() => runApp(const MainApp());
 
