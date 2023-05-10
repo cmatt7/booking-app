@@ -58,8 +58,8 @@ class _BottomBar extends State<BottomBar> {
             label: "Search",
           ),
           BottomNavigationBarItem(
-            icon: Icon(FluentSystemIcons.ic_fluent_airplane_regular),
-            activeIcon: Icon(FluentSystemIcons.ic_fluent_airplane_filled),
+            icon: Icon(FluentSystemIcons.ic_fluent_ticket_regular),
+            activeIcon: Icon(FluentSystemIcons.ic_fluent_ticket_filled),
             label: "Ticket",
           ),
           BottomNavigationBarItem(
